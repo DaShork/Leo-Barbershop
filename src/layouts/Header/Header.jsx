@@ -3,6 +3,7 @@ import { Menu } from 'antd';
 import { navItems } from '../../data/NavData';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/Leo_Barber-Photoroom.png';
+import './Header.css';
 
 function Header() {
 
@@ -31,7 +32,7 @@ function Header() {
   return (
     <div className="header">
       
-      <img src={Logo} alt="Leo Barbershop" className="Logo" />
+      <img src={Logo} alt="Leo Barbershop" className="logo" />
 
       {/* NAVBAR */}
       <Menu
