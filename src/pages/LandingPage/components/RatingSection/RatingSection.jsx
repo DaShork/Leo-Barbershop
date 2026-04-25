@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 
 import { Navigation, Pagination } from 'swiper/modules';
 import { Rate } from 'antd';
+import { getImage } from '/src/utils/getImage.js';
 
 import { reviews } from '/src/data/RatingData';
 
@@ -29,7 +30,7 @@ function RatingSection () {
                 <SwiperSlide key={item.id}>
                 <div className="review-card">
                     
-                    <img src={item.avatar} className="avatar" />
+                    <img src={getImage(item.avatar)} className="avatar" />
 
                     <h3>{item.name}</h3>
 
