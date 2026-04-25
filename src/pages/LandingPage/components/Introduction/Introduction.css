@@ -1,0 +1,9 @@
+.intro-container{
+    display: flex;
+}
+
+.intro-img{
+    width: 50%;
+    height: 50vh;
+    object-fit:cover;
+}
