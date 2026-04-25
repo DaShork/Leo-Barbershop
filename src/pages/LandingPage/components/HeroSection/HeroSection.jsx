@@ -1,26 +1,21 @@
 import React from 'react';
 import { Carousel } from 'antd';
-const contentStyle = {
-  margin: 0,
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+import './HeroSection.css';
+
+
 const HeroSection = () => (
   <Carousel autoplay>
     <div>
-      <h3 style={contentStyle}>1</h3>
+      <img src = '/images/hero1.jpg' alt = 'Leo Barbershop' className = 'hero-img' />
     </div>
     <div>
-      <h3 style={contentStyle}>2</h3>
+      <img src = '/images/hero2.jpg' alt = 'Leo Barbershop' className = 'hero-img' />
     </div>
     <div>
-      <h3 style={contentStyle}>3</h3>
+      <img src = '/images/hero3.jpg' alt = 'Leo Barbershop' className = 'hero-img' />
     </div>
     <div>
-      <h3 style={contentStyle}>4</h3>
+      <img src = '/images/hero4.jpg' alt = 'Leo Barbershop' className = 'hero-img' />
     </div>
   </Carousel>
 );

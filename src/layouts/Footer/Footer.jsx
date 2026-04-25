@@ -1,4 +1,5 @@
 import Logo from '../../assets/Leo_Barber.png';
+import './Footer.css';
 
 function Footer () {
     return (

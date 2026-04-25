@@ -1,12 +1,62 @@
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1em;
-    padding: 0.5em 1em;
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4em;
+  font-size: 20px;
 }
 
-.logo{
-    width: 100px;
-    height: auto;
+/* LOGO */
+.logo {
+  height: 8em;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent !important;
+  border-bottom: none !important;
+  padding: 0 50px;
+}
+
+
+
+/* ITEM TITLE*/
+.nav-menu .ant-menu-item,
+.nav-menu .ant-menu-submenu-title{
+    color: white !important;
+    font-size: 20px;
+    margin: 0 2em;
+    padding: 0 2em;
+}
+.nav-menu .ant-menu-submenu-arrow {
+  display: inline-block !important;
+  color: white !important;
+}
+
+/* HOVER */
+.nav-menu .ant-menu-item:hover,
+.nav-menu .ant-menu-submenu-title:hover {
+  color: #d4af37 !important;
+}
+
+
+/* ACTIVE */
+.nav-menu .ant-menu-item-selected {
+  color: #d4af37 !important;
+}
+
+/* REMOVE background khi hover */
+.nav-menu .ant-menu-item:hover::after,
+.nav-menu .ant-menu-submenu-title:hover::after {
+  border-bottom: none !important;
+}
+
+
+.booking-btn{
+    text-decoration: none;
+    color :white;
 }

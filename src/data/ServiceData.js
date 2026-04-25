@@ -3,7 +3,7 @@ export const services = [
     id: 1,
     title: 'Cắt tóc',
     desc: 'Lorem is num lmao ble burh hehe dark burh he la ?',
-    img: '/images/service1.png',
+    img: '/images/model1.jpg',
   },
 
   {
