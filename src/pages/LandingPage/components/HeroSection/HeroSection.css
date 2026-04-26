@@ -35,4 +35,24 @@
 /* subtitle */
 .hero-sub {
     font-size: 34px;
+    letter-spacing: 4px;
+}
+
+.hero-btn {
+    background-color: var(--color-secondary);
+    font-family: var(--font-title);
+    font-size: 32px;
+    border-radius: 12px;
+    padding: 5px 20px;
+    border-color: var(--color-btn-str);
+    border-width: 4px;
+    border-style: solid;
+}
+
+.hero-btn .hero-btn-text {
+    background: linear-gradient(180deg, var(--color-btn-text-primary), var(--color-btn-text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent; 
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
 }

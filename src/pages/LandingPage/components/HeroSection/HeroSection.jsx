@@ -23,8 +23,10 @@ function HeroSection() {
       </Carousel>
       <div className='overlay'>
         <h1 className = 'hero-title'>LEO BARBERSHOP</h1>
-        <p className = 'hero-sub'>EMBRACE YOUR UNIQUENESS</p>
-        <button className = 'hero-btn'>Đặt lịch ngay</button>
+        <h1 className = 'hero-sub'>EMBRACE YOUR UNIQUENESS</h1>
+        <button className = 'hero-btn'>
+          <span className = 'hero-btn-text'>Đặt lịch ngay !</span>
+        </button>
       </div>
 
     </div>

@@ -1,8 +1,18 @@
+/* IMPORT CUSTOM FONTS */
+@font-face {
+  font-family: 'ChunkFiveEx';
+  src: url('/fonts/Chunkfive Ex.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* RESET CSS */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   /* ===== COLOR SYSTEM ===== */
   --color-primary: #D4AF37;
@@ -11,13 +21,19 @@
   --color-bg-dark: #1A1A1A;
   --color-bg-light: #F5F5F5;
 
+  --color-btn-text-primary: #D4AF37;
+  --color-btn-text-secondary: #D35D09;
+
+  --color-btn-str: #FFC300;
+
   /* Optional semantic (nên có) */
   --color-text-dark: #111111;
   --color-text-light: #FFFFFF;
 
   /* ===== TYPOGRAPHY ===== */
-  --font-heading: 'Alfa Slab One', serif;
-  --font-body: 'Roboto', 'Oswald', sans-serif;
+  --font-title: 'ChunkFiveEx', serif;
+  --font-subtitle: 'Sansita Swashed', cursive;
+  --font-body: 'Comfortaa', sans-serif;
 
   /* Font size (basic scale) */
   --font-size-base: 16px;
@@ -29,8 +45,25 @@
   --font-weight-bold: 700;
   --font-weight-regular: 400;
 }
-body {
+body,
+.ant-typography,
+.ant-menu,
+.ant-btn {
   font-family: var(--font-body);
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
+}
+
+
+/* TYPOGRAPHY */
+h1 {
+  font-family: var(--font-title);
+}
+
+h2 {
+  font-family: var(--font-subtitle);
+}
+
+p {
+  font-family: var(--font-body);
 }
