@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'antd';
 import { getImage } from '/src/utils/getImage.js';
 import './HeroSection.css';
+import { Link } from 'react-router-dom';
 
 
 function HeroSection() {
@@ -24,9 +25,9 @@ function HeroSection() {
       <div className='overlay'>
         <h1 className = 'hero-title'>LEO BARBERSHOP</h1>
         <h1 className = 'hero-sub'>EMBRACE YOUR UNIQUENESS</h1>
-        <button className = 'hero-btn'>
-          <span className = 'hero-btn-text'>Đặt lịch ngay !</span>
-        </button>
+        <Link to ='/booking' className = 'cta-btn'>
+          <span className = 'cta-btn-text'>Đặt lịch ngay!</span>
+        </Link>
       </div>
 
     </div>

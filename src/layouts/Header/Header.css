@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 4em;
+  margin: 0 2em;
   font-size: 20px;
 }
 
@@ -57,8 +57,6 @@
   border-bottom: none !important;
 }
 
-
-.booking-btn{
-    text-decoration: none;
-    color :white;
+.header .cta-btn {
+  font-size: 24px;
 }

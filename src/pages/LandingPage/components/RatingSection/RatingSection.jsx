@@ -8,6 +8,7 @@ import { Rate } from 'antd';
 import { getImage } from '/src/utils/getImage.js';
 
 import { reviews } from '/src/data/RatingData';
+import './RatingSection.css'
 
 
 function RatingSection () {

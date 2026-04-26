@@ -1,9 +1,15 @@
 .intro-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-bg-grey);
 }
 
 .intro-img{
     width: 50%;
     height: 50vh;
     object-fit:cover;
+}
+
+.intro-text-container{
+    padding:  50px;
 }

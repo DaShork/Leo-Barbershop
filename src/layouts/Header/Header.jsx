@@ -42,8 +42,9 @@ function Header() {
       />
 
       {/* CTA BUTTON */}
-      <Link to="/booking" className="booking-btn">
-        Đặt lịch ngay!
+
+      <Link to="/booking" className="cta-btn">
+        <span className = 'cta-btn-text'>Đặt lịch ngay!</span>
       </Link>
 
     </div>

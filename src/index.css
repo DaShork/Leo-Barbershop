@@ -15,10 +15,11 @@
 
 :root {
   /* ===== COLOR SYSTEM ===== */
-  --color-primary: #D4AF37;
+  --color-primary: #FFC300;
   --color-secondary: #8B0000;
 
-  --color-bg-dark: #1A1A1A;
+  --color-bg-dark: #1C1C1C;
+  --color-bg-grey: #353332;
   --color-bg-light: #F5F5F5;
 
   --color-btn-text-primary: #D4AF37;
@@ -58,10 +59,12 @@ body,
 /* TYPOGRAPHY */
 h1 {
   font-family: var(--font-title);
+  letter-spacing: 2px;
 }
 
 h2 {
   font-family: var(--font-subtitle);
+  color: var(--color-primary);
 }
 
 p {
