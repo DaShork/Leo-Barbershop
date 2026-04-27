@@ -14,39 +14,42 @@ import './RatingSection.css'
 function RatingSection () {
     return (
         <div className = 'rating-container'>
-            <h2>Chất lượng là thước đo chuẩn nhất</h2>
-            <h1 className = 'rating-title'>Đánh giá</h1>
-            <p> Nhận xét và đánh giá từ các khách hàng, học viên thực tế</p>
-
-            <div className = 'rating-carosel'>
-            <Swiper
-                modules={[Navigation, Pagination]}
-                slidesPerView={3}
-                spaceBetween={30}
-                navigation
-                pagination={{ clickable: true }}
-                loop
-            >
-            {reviews.map((item) => (
-                <SwiperSlide key={item.id}>
-                <div className="review-card">
-                    
-                    <img src={getImage(item.avatar)} className="avatar" />
-
-                    <h3>{item.name}</h3>
-
-                    <p>{item.comment}</p>
-
-                    <Rate 
-                    disabled 
-                    allowHalf 
-                    defaultValue={item.rating} 
-                    />
-
+            <div className = 'rating-text'>
+                <h2>Chất lượng là thước đo chuẩn nhất</h2>
+                <h1 className = 'rating-title'>Đánh giá</h1>
+                <p> Nhận xét và đánh giá từ các khách hàng, học viên thực tế</p>
+            </div>
+            <div className = 'rating-wrapper'>
+                <div className = 'rating-carosel'>
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        slidesPerView={2.5}
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        navigation
+                        pagination={{ clickable: true }}
+                        loop
+                    >
+                    {reviews.map((item) => (
+                        <SwiperSlide key={item.id}>
+                        <div className="review-card">
+                            <div className = 'avt-container'>
+                                <img src={getImage(item.avatar)} className="avatar" />
+                            </div>
+                            <div className = 'review-detail'>
+                                <h3>{item.name}</h3>
+                                <p>{item.comment}</p>
+                                <Rate 
+                                disabled 
+                                allowHalf 
+                                defaultValue={item.rating} 
+                                />
+                            </div>
+                        </div>
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
                 </div>
-                </SwiperSlide>
-            ))}
-            </Swiper>
             </div>
         </div>
     );
