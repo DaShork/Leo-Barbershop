@@ -36,7 +36,7 @@ export const reviews = [
     name: 'Kim Mai',
     comment: 'Nài thằng ck Quang Giáp là của tao nhé?',
     rating: 5,
-    avatar: '/images/Kimmai.jpg',
+    avatar: '/images/KimMai.jpg',
   },
 
     {
