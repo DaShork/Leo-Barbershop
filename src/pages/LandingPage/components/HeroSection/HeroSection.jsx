@@ -22,6 +22,7 @@ function HeroSection() {
           <img src={getImage('/images/hero4.jpg')} alt='Leo Barbershop' className='hero-img' />
         </div>
       </Carousel>
+      <div className="hero-blur"></div>
       <div className='overlay'>
         <h1 className = 'hero-title'>LEO BARBERSHOP</h1>
         <h1 className = 'hero-sub'>EMBRACE YOUR UNIQUENESS</h1>
