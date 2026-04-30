@@ -1,0 +1,45 @@
+.footer-container { 
+    display:flex;
+    flex-direction: column;
+    padding: 50px
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-logo{
+    border-radius: 50%;
+    height: 10em;
+}
+
+
+.social-icon {
+  font-size: 2em;              
+  color: white;                
+  margin-right: 1em;           
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-logo{
+    height: 2em;
+    margin-right: 1em;
+}
+
+
+
+.link-nav li,
+.link-nav a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    list-style: none;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+  opacity: 0.7;
+  font-size: 14px;
+}
