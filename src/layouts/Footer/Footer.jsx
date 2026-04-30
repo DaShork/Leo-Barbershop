@@ -1,4 +1,4 @@
-import Logo from '../../assets/Leo_Barber.png';
+import Logo from '../../assets/Leo_Barber.webp';
 import { FacebookOutlined, InstagramOutlined, YoutubeOutlined } from '@ant-design/icons'
 import { getImage } from '/src/utils/getImage.js';
 
