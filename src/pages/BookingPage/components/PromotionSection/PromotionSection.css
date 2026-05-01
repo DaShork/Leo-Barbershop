@@ -1,0 +1,96 @@
+.promotion-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: var(--color-bg-grey);
+  border-radius: 8px;
+}
+
+.promotion-section .section-title {
+  font-family: var(--font-title);
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.promotion-input,
+.notes-input {
+  margin-bottom: 20px;
+}
+
+.promotion-section .ant-input,
+.promotion-section .ant-input-textarea > textarea {
+  background-color: var(--color-bg-dark) !important;
+  border-color: #666 !important;
+  color: var(--color-text-light) !important;
+  border-radius: 6px !important;
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.promotion-section .ant-input:hover,
+.promotion-section .ant-input-textarea > textarea:hover {
+  border-color: var(--color-primary) !important;
+}
+
+.promotion-section .ant-input:focus,
+.promotion-section .ant-input-textarea > textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(255, 195, 0, 0.1) !important;
+}
+
+.promotion-section .ant-input::placeholder,
+.promotion-section .ant-input-textarea > textarea::placeholder {
+  color: #999;
+}
+
+/* Info Text */
+.info-text {
+  background-color: rgba(255, 195, 0, 0.1);
+  border-left: 3px solid var(--color-primary);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.info-line {
+  margin: 8px 0;
+  color: var(--color-text-light);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.info-line strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.emoji {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Checkbox */
+.checkbox-item .ant-checkbox-wrapper {
+  color: var(--color-text-light) !important;
+  font-size: 14px;
+}
+
+.checkbox-item .ant-checkbox-inner {
+  background-color: var(--color-bg-dark) !important;
+  border-color: #666 !important;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-item .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.checkbox-item .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: var(--color-bg-dark) !important;
+}

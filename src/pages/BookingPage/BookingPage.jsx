@@ -1,126 +1,84 @@
+import React, { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { Form, Input, Select, DatePicker, TimePicker, Button } from 'antd';
-import { services } from '../../data/ServiceData'
-import './BookingPage.css'
-const { Option } = Select;
+import { Form, Button, message } from 'antd';
+import './BookingPage.css';
+import CustomerInfoForm from './components/CustomerInfoForm/CustomerInfoForm';
+import BranchesSection from './components/BranchesSection/BranchesSection';
+import ServicesSection from './components/ServicesSection/ServicesSection';
+import DateTimeSection from './components/DateTimeSection/DateTimeSection';
+import PromotionSection from './components/PromotionSection/PromotionSection';
 
 function BookingPage() {
+  const [form] = Form.useForm();
 
-    {/*Ham de gui mail ve user */}
-    const onFinish = async (values) => {
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
+  const onFinish = async (values) => {
     try {
-        await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-            name: values.name,
-            user_email: values.email, // 👈 QUAN TRỌNG
-            service: values.service,
-            date: values.date.format('DD/MM/YYYY'),
-            time: values.time.format('HH:mm'),
-        },
-        'YOUR_PUBLIC_KEY'
-        );
+          name: values.name,
+          user_email: values.email,
+          service: values.service,
+          branch: values.branch,
+          size: values.size,
+          date: values.date ? values.date.format('DD/MM/YYYY') : '',
+          time: values.time || '',
+          notes: values.notes || '',
+          promotion: values.promotion || '',
+        }
+      );
 
-        alert('Đã gửi email xác nhận!');
+      message.success('Đã gửi email xác nhận!');
+      form.resetFields();
     } catch (err) {
-        console.error(err);
-        alert('Gửi thất bại');
+      console.error(err);
+      message.error('Gửi thất bại');
     }
-    };
+  };
 
   return (
-    <div className = 'booking-container' >
-      <h1>Đặt lịch</h1>
-      <h2>Quý Khách vui lòng cho biết thông tin</h2>
-      <Form 
-        layout='vertical'
-        onFinish={onFinish}
-        className= 'booking-form'
-      >
-
-        <Form.Item
-          label='Họ và tên'
-          name='name'
-          rules={[{ required: true, message: 'Vui lòng nhập tên!' }]}
+    <div className="booking-container">
+      <div className="booking-wrapper">
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          className="booking-form"
         >
-          <Input />
-        </Form.Item>
+          {/* Customer Info Section */}
+          <CustomerInfoForm />
 
+          {/* Branches Section */}
+          <BranchesSection />
 
-        <Form.Item
-          label='Số điện thoại'
-          name='phone'
-          rules={[{ required: true, message: 'Vui lòng nhập số điện thoại!' }]}
-        >
-          <Input />
-        </Form.Item>
+          {/* Services Section */}
+          <ServicesSection />
 
-        <Form.Item
-          label = 'Email'
-          name = 'email'
-          rule={[
-            {required: true, message: 'Vui lòng nhập Email!'},
-            { type: 'email', message: 'Email không hợp lệ' }
-          ]}
-        >
-            <Input />
-        </Form.Item>
+          {/* Date Time Section */}
+          <DateTimeSection />
 
-        <Form.Item
-          label = 'Tổng số Khách'
-          name = 'size'
-          rules = {[{required: false, message: 'Tổng số khách cần phục vụ nếu có'}]}
-        >
-          <Input />
-        </Form.Item>
+          {/* Promotion Section */}
+          <PromotionSection />
 
-
-        <Form.Item
-          label="Dịch vụ"
-          name="service"
-          rules={[{ required: true }]}
-        >
-            <Select
-                placeholder="Chọn dịch vụ"
-                options={services.map(s => ({
-                value: s.title,
-                label: s.title
-                }))}
-            />
-        </Form.Item>
-
-        {/* Date */}
-        <Form.Item
-          label="Ngày"
-          name="date"
-          rules={[{ required: true }]}
-        >
-          <DatePicker style={{ width: '100%' }} />
-        </Form.Item>
-
-        {/* Time */}
-        <Form.Item
-          label="Giờ"
-          name="time"
-          rules={[{ required: true }]}
-        >
-          <TimePicker style={{ width: '100%' }} format="HH:mm" />
-        </Form.Item>
-
-        {/* Note */}
-        <Form.Item
-          label="Ghi chú"
-          name="note"
-        >
-          <Input.TextArea rows={4} />
-        </Form.Item>
-
-        {/* Submit */}
-        <Button type="primary" htmlType="submit" block>
-          Đặt lịch ngay
-        </Button>
-      </Form>
+          {/* Submit Button */}
+          <Form.Item className="submit-button-wrapper">
+            <Button 
+              type="primary" 
+              htmlType="submit" 
+              block 
+              className="submit-btn"
+            >
+              Đặt lịch ngay
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     </div>
   );
 }

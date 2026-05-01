@@ -1,0 +1,58 @@
+.services-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: var(--color-bg-grey);
+  border-radius: 8px;
+}
+
+.services-section .section-title {
+  font-family: var(--font-title);
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services-section .section-label {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.services-section .no-label .ant-form-item-label {
+  display: none;
+}
+
+.services-section .ant-select-selector {
+  background-color: var(--color-bg-dark) !important;
+  border-color: #666 !important;
+  border-radius: 6px !important;
+  color: var(--color-text-light) !important;
+  min-height: 40px;
+}
+
+.services-section .ant-select-selector:hover {
+  border-color: var(--color-primary) !important;
+}
+
+.services-section .ant-select-focused .ant-select-selector {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(255, 195, 0, 0.1) !important;
+}
+
+.services-section .ant-select-arrow {
+  color: var(--color-primary);
+}
+
+.services-section .ant-select-item-option {
+  color: var(--color-text-dark) !important;
+}
+
+.services-section .ant-select-item-option-selected {
+  background-color: rgba(255, 195, 0, 0.15) !important;
+  color: var(--color-text-dark) !important;
+  font-weight: 500;
+}

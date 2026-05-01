@@ -1,0 +1,69 @@
+.branches-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: var(--color-bg-grey);
+  border-radius: 8px;
+}
+
+.branches-section .section-label {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.branches-section .no-label .ant-form-item-label {
+  display: none;
+}
+
+.branches-section .ant-select-selector {
+  background-color: var(--color-bg-dark) !important;
+  border-color: #666 !important;
+  border-radius: 6px !important;
+  color: var(--color-text-light) !important;
+}
+
+.branches-section .ant-select-selector:hover {
+  border-color: var(--color-primary) !important;
+}
+
+.branches-section .ant-select-focused .ant-select-selector {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(255, 195, 0, 0.1) !important;
+}
+
+.branches-section .ant-select-arrow {
+  color: var(--color-primary);
+}
+
+.branches-section .ant-select-item-option {
+  color: var(--color-text-dark) !important;
+}
+
+.branches-section .ant-select-item-option-selected {
+  background-color: rgba(255, 195, 0, 0.15) !important;
+  color: var(--color-text-dark) !important;
+}
+
+.branches-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.branch-item {
+  padding: 15px;
+  background-color: var(--color-bg-dark);
+  border: 1px solid #666;
+  border-radius: 6px;
+  color: var(--color-text-light);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.branch-item:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(255, 195, 0, 0.05);
+}

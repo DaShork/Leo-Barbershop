@@ -1,20 +1,102 @@
-.ant-form {
-  max-width: 500px;
-  margin: auto;
+.booking-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
 }
 
-.ant-input,
-.ant-select-selector {
-  border-radius: 8px !important;
+.booking-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.ant-form-item-label > label {
+.booking-form {
+  width: 100%;
+}
+
+/* Form Items */
+.booking-form .ant-form-item {
+  margin-bottom: 0;
+}
+
+.booking-form .ant-form-item-label {
+  margin-bottom: 8px;
+}
+
+.booking-form .ant-form-item-label > label {
   color: var(--color-text-light) !important;
-  font-size: 16px;
   font-weight: 500;
+  font-family: var(--font-body);
+  font-size: 14px;
 }
 
-.ant-btn-primary {
-  background-color: var(--color-primary);
-  border: none;
+/* Input Styling */
+.booking-form .ant-input,
+.booking-form .ant-select-selector,
+.booking-form .ant-picker {
+  background-color: var(--color-bg-dark) !important;
+  border-color: #666 !important;
+  border-radius: 6px !important;
+  color: var(--color-text-light) !important;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.booking-form .ant-input:hover,
+.booking-form .ant-select-selector:hover,
+.booking-form .ant-picker:hover {
+  border-color: var(--color-primary) !important;
+}
+
+.booking-form .ant-input:focus,
+.booking-form .ant-input-focused,
+.booking-form .ant-select-focused .ant-select-selector,
+.booking-form .ant-picker-focused {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(255, 195, 0, 0.1) !important;
+}
+
+.booking-form .ant-input::placeholder {
+  color: #999;
+}
+
+/* Submit Button */
+.submit-button-wrapper {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.submit-btn {
+  background-color: var(--color-primary) !important;
+  border: none !important;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: 6px !important;
+  color: var(--color-bg-dark) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-btn-text-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 195, 0, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 30px 15px;
+  }
+
+  .booking-wrapper {
+    max-width: 100%;
+  }
 }
