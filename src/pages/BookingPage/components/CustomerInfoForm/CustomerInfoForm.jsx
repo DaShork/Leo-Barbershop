@@ -5,7 +5,7 @@ function CustomerInfoForm() {
   return (
     <div className="customer-info-section">
       <h1 className="section-title">Đặt lịch</h1>
-      <p className="section-subtitle">Quý khách vui lòng cho biết thông tin</p>
+      <h2 className="section-subtitle">Quý khách vui lòng cho biết thông tin</h2>
       <p className="required-note">
         <span className="required-mark">*</span> 
         Các thông tin này là bắt buộc vui lòng không để trống!

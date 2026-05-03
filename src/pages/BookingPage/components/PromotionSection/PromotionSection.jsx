@@ -35,7 +35,7 @@ function PromotionSection() {
         className="checkbox-item"
       >
         <Checkbox>
-          Vấn dữ liệu tin tức. "Vui lòng" dùng ngập hạn để bàng yêu cầu áp dụng thêm cuộc gọi tự động
+          Bạn chưa chắc chắn và cần tư vấn thêm, vui lòng đợi trong 5 đến 10 phút để nhân viên liên hệ và hỗ trợ bạn nhé!
         </Checkbox>
       </Form.Item>
     </div>

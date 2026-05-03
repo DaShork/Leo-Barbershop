@@ -13,8 +13,8 @@ function DateTimeSection() {
   return (
     <div className="datetime-section">
       <div className="date-picker-wrapper">
-        <h3 className="section-title">Ngày đặt lịch</h3>
-        <p className="section-label">Chọn ngày mà bạn muốn đến <span className="required-mark">*</span></p>
+        <h1 className="section-title">Ngày đặt lịch</h1>
+        <h2 className="section-subtitle">Chọn ngày mà bạn muốn đến</h2>
 
         <Form.Item
           name="date"
@@ -26,8 +26,8 @@ function DateTimeSection() {
       </div>
 
       <div className="time-slots-wrapper">
-        <h3 className="section-title">Chọn khung giờ dịch vụ</h3>
-        <p className="section-label">Chọn khung giờ <span className="required-mark">*</span></p>
+        <h1 className="section-title">Chọn khung giờ dịch vụ</h1>
+        <h2 className="section-subtitle">Chọn khung giờ</h2>
 
         <Form.Item
           name="time"

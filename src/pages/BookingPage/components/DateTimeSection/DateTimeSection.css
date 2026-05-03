@@ -10,16 +10,6 @@
   margin-bottom: 30px;
 }
 
-.datetime-section .section-title {
-  font-family: var(--font-title);
-  font-size: 28px;
-  color: var(--color-primary);
-  margin-bottom: 15px;
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .datetime-section .section-label {
   font-size: 14px;
   color: var(--color-text-light);

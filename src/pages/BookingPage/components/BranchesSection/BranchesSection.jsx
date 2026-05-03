@@ -10,8 +10,8 @@ const branches = [
 function BranchesSection() {
   return (
     <div className="branches-section">
-      <h3 className="section-title">Chọn chi nhánh bạn muốn đến</h3>
-      <p className="section-label">Chọn chi nhánh <span className="required-mark">*</span></p>
+      <h1 className="section-title">Chọn chi nhánh bạn muốn đến</h1>
+      <h2 className="section-subtitle">Chọn chi nhánh bạn muốn đến!</h2>
 
       <Form.Item
         name="branch"

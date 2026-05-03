@@ -59,7 +59,8 @@ body,
 /* TYPOGRAPHY */
 h1 {
   font-family: var(--font-title);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  color: var(--color-text-light);
 }
 
 h2 {
