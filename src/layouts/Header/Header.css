@@ -5,10 +5,12 @@
   justify-content: space-between;
   padding: 0 2em;
   font-size: 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index:100;
   background-color: var(--color-bg-dark);
+  height: 18vh;
+  width: 100%;
 }
 
 /* LOGO */

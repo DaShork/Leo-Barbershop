@@ -36,7 +36,9 @@ function Header() {
   return (
     <div className="header">
       
-      <img src={Logo} alt="Leo Barbershop" className="logo" />
+      <a href= "/">
+        <img src={Logo} alt="Leo Barbershop" className="logo"  /> 
+      </a>
 
       {/* NAVBAR */}
       <Menu

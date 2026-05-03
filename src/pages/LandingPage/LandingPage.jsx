@@ -9,13 +9,10 @@ import './LandingPage.css'
 function LandingPage() {
     return (
         <div className = 'landing-page'>
-            <Header />
             <HeroSection />
             <Introduction />
             <ServiceSection />
             <RatingSection />
-            <Footer />
-
         </div>
 
     )
