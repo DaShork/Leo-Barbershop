@@ -4,12 +4,21 @@ import './DateTimeSection.css';
 const timeSlots = [
   '10:00', '10:30', '11:00', '11:30',
   '13:00', '13:30', '14:00', '14:30',
-  '14:00', '14:30', '15:00', '15:30',
-  '16:00', '16:30', '17:00', '17:30',
-  '16:00', '16:30', '19:00', '19:30'
+  '15:00', '15:30', '16:00', '16:30',
+  '17:00', '17:30', '18:00', '18h30',
+  '19:00', '19:30', '20:00', '20:30'
 ];
 
 function DateTimeSection() {
+
+  const form = Form.useFormInstance();
+
+  const handleSelectTime = (time) => {
+    form.setFieldsValue({ time });
+  };
+
+  const selectedTime = Form.useWatch('time', form);
+
   return (
     <div className="datetime-section">
       <div className="date-picker-wrapper">
@@ -29,14 +38,15 @@ function DateTimeSection() {
         <h1 className="section-title">Chọn khung giờ dịch vụ</h1>
         <h2 className="section-subtitle">Chọn khung giờ</h2>
 
-        <Form.Item
-          name="time"
-          rules={[{ required: true, message: 'Vui lòng chọn giờ!' }]}
-          className="no-label"
-        >
+        <Form.Item name="time">
           <div className="time-slots-grid">
             {timeSlots.map((time, index) => (
-              <button key={index} className="time-slot-btn" type="button">
+              <button
+                key={index}
+                type="button"
+                className={`time-slot-btn ${selectedTime === time ? 'active' : ''}`}
+                onClick={() => handleSelectTime(time)}
+              >
                 {time}
               </button>
             ))}

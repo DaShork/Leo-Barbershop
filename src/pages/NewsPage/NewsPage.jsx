@@ -1,6 +1,12 @@
+import LatestSection from './components/LatestSection/LatestSection'
+
 function NewsPage () {
     return (
-        <h1>Day la News Page</h1>
+        <dic className = "news-container">
+            <h1>Day la News Page</h1>
+            <LatestSection />
+        </dic>
+
     )
 }
 

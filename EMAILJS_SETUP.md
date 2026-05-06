@@ -1,4 +1,5 @@
-# 📧 EmailJS Setup Guide
+# 📧 Cách setup với EmailJS
+- Lưu ý: đây chỉ là các bước tôi rút ra sau khi sử dụng EmailJS, không phải bắt buộc làm theo, nếu bạn có phương án sử dụng hay cách sử dụng khác tốt hơn, vui lòng sử dụng theo ý thích, cho tôi biết thêm nếu bạn muôn
 
 ## 1. Tạo tài khoản EmailJS
 - Truy cập: https://www.emailjs.com/
@@ -43,36 +44,36 @@
 <body style="font-family: Arial, sans-serif; background-color: #1C1C1C; color: #fff; padding: 20px;">
   <div style="max-width: 600px; margin: 0 auto; background-color: #353332; padding: 30px; border-radius: 8px;">
     <h1 style="color: #FFC300; text-align: center; font-size: 28px; margin-bottom: 20px;">
-      ✂️ XÁC NHẬN ĐẶT LỊCH
+        XÁC NHẬN ĐẶT LỊCH
     </h1>
 
     <hr style="border: none; border-top: 2px solid #FFC300; margin: 20px 0;" />
 
     <div style="margin: 20px 0;">
       <p><strong>Xin chào {{name}},</strong></p>
-      <p>Cảm ơn bạn đã đặt lịch tại 4RAU Barbershop. Dưới đây là chi tiết booking của bạn:</p>
+      <p>Cảm ơn bạn đã đặt lịch tại Leo Barbershop. Dưới đây là chi tiết booking của bạn:</p>
     </div>
 
     <div style="background-color: #1C1C1C; padding: 20px; border-radius: 6px; margin: 20px 0;">
-      <p><strong style="color: #FFC300;">👤 Tên khách hàng:</strong> {{name}}</p>
-      <p><strong style="color: #FFC300;">📧 Email:</strong> {{user_email}}</p>
-      <p><strong style="color: #FFC300;">✂️ Dịch vụ:</strong> {{service}}</p>
-      <p><strong style="color: #FFC300;">📍 Chi nhánh:</strong> {{branch}}</p>
-      <p><strong style="color: #FFC300;">👥 Số khách:</strong> {{size}}</p>
-      <p><strong style="color: #FFC300;">📅 Ngày:</strong> {{date}}</p>
-      <p><strong style="color: #FFC300;">🕐 Giờ:</strong> {{time}}</p>
-      <p><strong style="color: #FFC300;">📝 Ghi chú:</strong> {{notes}}</p>
-      <p><strong style="color: #FFC300;">🎁 Khuyến mãi:</strong> {{promotion}}</p>
+      <p><strong style="color: #FFC300;"> Tên khách hàng:</strong> {{name}}</p>
+      <p><strong style="color: #FFC300;"> Email:</strong> {{user_email}}</p>
+      <p><strong style="color: #FFC300;"> Dịch vụ:</strong> {{service}}</p>
+      <p><strong style="color: #FFC300;"> Chi nhánh:</strong> {{branch}}</p>
+      <p><strong style="color: #FFC300;"> Số khách:</strong> {{size}}</p>
+      <p><strong style="color: #FFC300;"> Ngày:</strong> {{date}}</p>
+      <p><strong style="color: #FFC300;"> Giờ:</strong> {{time}}</p>
+      <p><strong style="color: #FFC300;"> Ghi chú:</strong> {{notes}}</p>
+      <p><strong style="color: #FFC300;"> Khuyến mãi:</strong> {{promotion}}</p>
     </div>
 
     <hr style="border: none; border-top: 2px solid #FFC300; margin: 20px 0;" />
 
     <div style="text-align: center; margin-top: 30px;">
       <p style="color: #999; font-size: 12px;">
-        Vui lòng đến đúng giờ. Nếu có thay đổi, hãy liên hệ chúng tôi sớm.
+        Vui lòng đến đúng giờ. Nếu có thay đổi, hãy liên hệ chúng tôi sớm để được hỗ trợ.
       </p>
       <p style="color: #FFC300; font-weight: bold;">
-        4RAU Barbershop - Chuyên nghiệp & Sang trọng
+        Leo Barbershop - Chuyên nghiệp & Sang trọng
       </p>
     </div>
   </div>
@@ -106,6 +107,7 @@ VITE_EMAILJS_PUBLIC_KEY=xxxx_xxxx_xxxx_xxxx
 - Kiểm tra email để xem có nhận được không
 
 ## ⚠️ Chú ý:
+- Trong dự án này tôi chỉ sử dụng free plan của EmailJS nhằm mục đích học tập và build project, vui lòng không dùng project để spam mail.
 - EmailJS free plan: 200 email/tháng
 - Biến template phải khớp với tên key gửi từ code (bao gồm dấu `{}`)
 - Nếu Email Services không nhận email, check Spam folder hoặc SMTP setting

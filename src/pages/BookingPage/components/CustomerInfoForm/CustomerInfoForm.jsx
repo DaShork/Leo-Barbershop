@@ -40,7 +40,7 @@ function CustomerInfoForm() {
 
       <Form.Item
         label="Ghi chú"
-        name="notes"
+        name="customerNotes"
         rules={[{ required: false, message: 'Bạn có điều gì cần lưu ý cho chúng tôi không?' }]}
       >
         <Input placeholder="Ghi Chú" />
